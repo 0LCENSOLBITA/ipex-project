@@ -5,6 +5,7 @@ import {
   Eye,
   EyeOff,
 } from "lucide-react";
+import { API_URL } from "@/lib/config";
 
 export const Route =
   createFileRoute("/admin/profile")({
@@ -86,7 +87,7 @@ function ProfilePage() {
 
         const res =
           await fetch(
-            "http://localhost:5000/api/auth/change-password",
+            `${API_URL}/auth/change-password`,
             {
               method: "PUT",
 

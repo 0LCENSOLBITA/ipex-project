@@ -1,5 +1,4 @@
-const BASE_URL =
-  "http://localhost:5000/api";
+import { API_URL as BASE_URL } from "@/lib/config";
 
 const jsonHeaders = {
   "Content-Type":

@@ -1,3 +1,4 @@
+import { UPLOADS_URL } from "@/lib/config";
 
 export default function SubmissionDetailsModal({
   submission,
@@ -540,7 +541,7 @@ submission.aiAnswers
                         <div
                           key={i}
                           onClick={() => {
-                            const base = "http://localhost:5000";
+                            const base = UPLOADS_URL;
                             const resolvedUrl = file.path
                               ? encodeURI(
                                   `${base}${
