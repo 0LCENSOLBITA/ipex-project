@@ -1,5 +1,5 @@
 const BASE_URL =
-  "http://localhost:5000/api";
+  "https://ipex-portal-backend.onrender.com/api";
 
 const jsonHeaders = {
   "Content-Type":
