@@ -100,15 +100,15 @@ const filteredSubs = useMemo(() => {
 
       ||
 
-      s.client?.name
-        ?.toLowerCase()
-        .includes(query)
+    s.client?.name
+  ?.toLowerCase?.()
+  ?.includes(query)
 
       ||
 
-      s.businessUnit?.name
-        ?.toLowerCase()
-        .includes(query)
+    s.businessUnit?.name
+  ?.toLowerCase?.()
+  ?.includes(query)
 
       ||
 
@@ -463,14 +463,20 @@ shadow-sm
                   "
                 >
 
-                  <td className="p-3">
-                    {typeof s.client === "object"
-                      ? s.client.name
-                      : clientsList.find(
-                          (c) =>
-                            String(c._id) === String(s.client)
-                        )?.name || "Unknown Client"}
-                  </td>
+                <td className="p-3">
+
+  {
+    s.client?.name ||
+
+    clientsList.find(
+      (c) =>
+        String(c._id) === String(s.client)
+    )?.name ||
+
+    "Deleted Client"
+  }
+
+</td>
 
                   <td className="p-3">
                     {s.businessUnit?.name || "—"}
@@ -727,9 +733,9 @@ shadow-sm
                 {s.data?.title}
               </div>
 
-              <div className="text-muted-foreground text-xs mt-1">
-                {s.client?.name || "Unknown Client"}
-              </div>
+           <div className="text-muted-foreground text-xs mt-1">
+  {s.client?.name || "Deleted Client"}
+</div>
 
               <div className="text-muted-foreground text-xs mt-1">
                 {new Date(
