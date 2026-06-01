@@ -2,11 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import EditBUModal from "@/routes/admin/EditBUModal";
+import { API_URL as BASE_URL } from "@/lib/config";
 export const Route = createFileRoute("/admin/business-units")({
   component: AdminBusinessUnits,
 });
-
-const BASE_URL = "http://localhost:5000/api";
 
 function AdminBusinessUnits() {
   const [clients, setClients] = useState<any[]>([]);

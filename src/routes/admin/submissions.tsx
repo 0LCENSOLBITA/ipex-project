@@ -2,14 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import SubmissionDetailsModal from "@/routes/admin/SubmissionDetailsModal";
+import { API_URL as BASE_URL } from "@/lib/config";
 
 export const Route = createFileRoute(
   "/admin/submissions"
 )({
   component: AdminSubmissions,
 });
-
-const BASE_URL = "http://localhost:5000/api";
 
 function AdminSubmissions() {
 

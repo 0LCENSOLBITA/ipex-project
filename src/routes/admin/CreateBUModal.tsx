@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import { toast } from "sonner";
+import { API_URL } from "@/lib/config";
 
 export default function CreateBUModal({
   onClose,
@@ -60,7 +61,7 @@ const loadUsers = async () => {
 
     const res =
       await fetch(
-        "http://localhost:5000/api/users"
+        `${API_URL}/users`
       );
 
     const data =

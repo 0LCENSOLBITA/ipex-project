@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
-
-const BASE_URL = "http://localhost:5000/api";
+import { API_URL as BASE_URL } from "@/lib/config";
 
 export default function EditClientModal({
   client,
