@@ -190,14 +190,14 @@ function RootComponent() {
       "https://conciera.staak.ca/widget.js";
 
     script.setAttribute(
-      "data-tenant",
-      "evergreen-residences"
-    );
+  "data-tenant",
+  "verveseniorliving"
+);
 
-    script.setAttribute(
-      "data-location",
-      "north-campus"
-    );
+script.setAttribute(
+  "data-location",
+  "verve-aspen-woods"
+);
 
     document.body.appendChild(
       script
